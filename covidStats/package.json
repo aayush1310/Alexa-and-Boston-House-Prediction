@@ -1,0 +1,18 @@
+{
+  "name": "covidstats",
+  "version": "1.0.0",
+  "description": "Alexa Skill for finding Covid cases around country",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ayush",
+  "license": "ISC",
+  "dependencies": {
+    "ask-sdk-core": "^2.11.0",
+    "ask-sdk-model": "^1.36.1",
+    "axios": "^0.22.0",
+    "dotenv": "^10.0.0",
+    "mongodb": "^4.1.3"
+  }
+}

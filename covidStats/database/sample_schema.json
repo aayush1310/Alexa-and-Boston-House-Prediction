@@ -1,0 +1,12 @@
+{
+    "_id": {
+        "$oid": "61621f8d8dfe1ff51865229b"
+    },
+    "intentName": "string",
+    "response": {
+        "NoIntent": {
+            "speak": "string",
+            "reprompt": "string"
+        }
+    }
+}

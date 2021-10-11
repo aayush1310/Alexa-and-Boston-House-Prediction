@@ -1,0 +1,204 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "covid skill",
+            "modelConfiguration": {
+                "fallbackIntentSensitivity": {
+                    "level": "LOW"
+                }
+            },
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "Covid_Status",
+                    "slots": [
+                        {
+                            "name": "Country",
+                            "type": "AMAZON.Country",
+                            "samples": [
+                                "Please tell me the status for {Country}",
+                                "I want status for {Country}",
+                                "I am searching for {Country}",
+                                "{Country}"
+                            ]
+                        },
+                        {
+                            "name": "CountType",
+                            "type": "Case_Type"
+                        }
+                    ],
+                    "samples": [
+                        "{CountType} cases in {Country}",
+                        "{Country} cases",
+                        "what is {Country} {CountType} cases",
+                        "{Country} {CountType} cases",
+                        "what is the {CountType} cases in {Country}",
+                        "tell me the {CountType} cases for {Country}",
+                        "covid nineteen status for {Country}",
+                        "what is the covid status in {Country}",
+                        "the country name is {Country}",
+                        "{Country}",
+                        "please tell me the case load of {Country}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.RepeatIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "CityName",
+                    "values": [
+                        {
+                            "id": "HOU",
+                            "name": {
+                                "value": "Houston",
+                                "synonyms": [
+                                    "space city"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "CHI",
+                            "name": {
+                                "value": "Chicago",
+                                "synonyms": [
+                                    "the windy city"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "LOS",
+                            "name": {
+                                "value": "Los Angeles",
+                                "synonyms": [
+                                    "the city of angels",
+                                    "la la land"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "NYC",
+                            "name": {
+                                "value": "New York City",
+                                "synonyms": [
+                                    "the big apple",
+                                    "the city that never sleeps"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "BOS",
+                            "name": {
+                                "value": "Boston",
+                                "synonyms": [
+                                    "beantown"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "SEA",
+                            "name": {
+                                "value": "Seattle",
+                                "synonyms": [
+                                    "frazier's house",
+                                    "frasier's house",
+                                    "emerald city"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Case_Type",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Total",
+                                "synonyms": [
+                                    "total"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Active",
+                                "synonyms": [
+                                    "total active",
+                                    "active"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "Covid_Status",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "Country",
+                            "type": "AMAZON.Country",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.943143416004.735316661350"
+                            }
+                        },
+                        {
+                            "name": "CountType",
+                            "type": "Case_Type",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.943143416004.735316661350",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Can you please confirm the country?"
+                    }
+                ]
+            }
+        ]
+    }
+}

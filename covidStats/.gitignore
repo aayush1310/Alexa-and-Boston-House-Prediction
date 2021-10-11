@@ -1,0 +1,19 @@
+# Logs
+logs
+*.log
+
+# RunTime Data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# dotenv environment variables
+.env
+.env.test
+
+#Node Modules
+node_modules/
+
+# VS Code Config
+.vscode

@@ -4,7 +4,7 @@
     },
     "intentName": "string",
     "response": {
-        "NoIntent": {
+        "<Intent_Name>": {
             "speak": "string",
             "reprompt": "string"
         }
